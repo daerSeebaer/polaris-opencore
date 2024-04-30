@@ -85,11 +85,9 @@ void CoreAudio::action( int id ) {
         } 
       return;
     case EXT_IDLE:
-      if (currentVolume == 0) // If saber was muted on last disarm, set volume to max
-      {
-        currentVolume = MAX_VOLUME;
-      }
-      firstTap = true;
+    // always mute after idle
+      currentVolume = 0;
+      firstTap = false;
       return;
     case ENT_VOLUME:
       currentVolume += (MAX_VOLUME * 0.25); // Volume increases in 25% increments, giving 4 levels (25%, 50%, 75%, 100%) plus mute
