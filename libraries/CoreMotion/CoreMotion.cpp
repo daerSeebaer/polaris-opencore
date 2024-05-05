@@ -115,8 +115,7 @@ void CoreMotion::action( int id ) {
       timer_horizontal.setFromNow(this,TIME_FOR_DISARM);
       return;
     case LP_ARMED:
-      if ((AccelZ < (HORIZONTAL_POSITION - TOLERANCE_POSITION)) || 
-          (AccelZ > (HORIZONTAL_POSITION + TOLERANCE_POSITION)))
+      if (AccelZ > DOWN_POSITION)
       {
         timer_horizontal.setFromNow(this,TIME_FOR_DISARM);
       }

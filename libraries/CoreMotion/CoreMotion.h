@@ -72,6 +72,7 @@ class CoreMotion: public Machine {
   static constexpr float VERTICAL_POSITION = 8.0;
   static constexpr float ARM_POSITION = -6.0;
   static constexpr float HORIZONTAL_POSITION = 0.0;
+  static constexpr float DOWN_POSITION = -7.0;
   static constexpr float TOLERANCE_POSITION = 2;
   static constexpr float TOLERANCE_VERTICAL_POSITION = 0.25;
   static constexpr int TIME_FOR_START_ARM = 500;
